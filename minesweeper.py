@@ -197,7 +197,7 @@ class MinesweeperAI():
         for i in range(cell[0] - 1, cell[0] + 2):
             for j in range(cell[1] - 1, cell[1] + 2):
                 if 0 <= i < self.height and 0 <= j < self.width:
-                    if (i, j) != cell and (i, j) not in self.safes:
+                    if (i, j) != cell and (i, j) not in self.safes and (i, j) not in self.mines:
                         cells.add((i, j))
 
         # Add a new sentence to the AI's knowledge base
